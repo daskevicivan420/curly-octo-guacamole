@@ -1,0 +1,15 @@
+
+struct CustomTransitionViewModifier: ViewModifier {
+    
+    let scale: CGFloat
+    let rotation: Double
+    
+    func body(content: Content) -> some View {
+        content
+            .scaleEffect(scale)
+            .rotationEffect(Angle(degrees: rotation))
+    }
+}
+
+extension AnyTransition {
+
